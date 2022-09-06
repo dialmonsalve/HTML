@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* Resetear margnes y pading de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Configurar anclas suaves */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Arial";
+  font-size: 1.6rem;
+}
+
+/* Desactivar estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1.5em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitar problemas con las imagnes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Resetear los enlaces para que funcionen como cajas */
+a {
+  display: block;
+}
+
+/* ...excepto para las que se encuentran en los parrafos */
+p a {
+  display: inline;
+}
+
+/* Quitar los puntos de las etiquetas li */
+li {
+  list-style-type: none;
+}
+
+/* Evitar problemas con los pseudoelementos de quotes */
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+/* Configurar el texto seleccionado */
+::selection {
+  background-color: #ea4aaa; /* Cambiar por variables */
+  color: #fff; /* Cambiar por variables */
+}
+
+/* Nivelar problemas de tipografía y colocación de formularios */
+form, input, textarea, select, button, lable {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+}
+
+/* Resetea tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitar los problemas con SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  padding: 5rem;
+  font-size: 7rem;
+  color: #000;
+}
+
+.carrusel {
+  width: 90%;
+  max-width: 100vw;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 5em 10em 10em #bebebe, -5em -5em 10em #ffffff;
+  overflow: hidden;
+  padding: 0.5em;
+}
+.carrusel .grande {
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrusel .img {
+  width: calc(33.3333333333% - 6em);
+  min-height: 10vh;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 1em 2em 2em #bebebe, -1em -1em 2em #ffffff;
+  max-width: 80%;
+  padding: 2rem;
+}
+.carrusel .puntos {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel .punto {
+  margin: 0.5em 0.5em 0;
+  border-radius: 2rem;
+  padding: 1em;
+  cursor: pointer;
+  border: 2px solid #41b883;
+}
+.carrusel .punto.activo {
+  background-color: #e23237;
+}

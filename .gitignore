@@ -1,0 +1,7 @@
+/eje_01/.gitignore
+/.vscode/
+/eje_01/node_modules/
+/eje_01/src/
+/eje_01/gulpfile.js
+/eje_01/package-lock.json
+/eje_01/package.json
